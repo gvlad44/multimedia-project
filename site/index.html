@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <div class="vo_nav">
+    <div class="vo_nav" id="home">
         <div class="vo_logo">
             <a href="./index.html"> <img src="./resources/img/WhatsApp_Image_2020-11-16_at_19.42.10.jpeg" </a>
         </div>
@@ -20,17 +20,19 @@
             <li><a href="#home" class="vo_nav_items">Home</a></li>
             <li><a href="#about" class="vo_nav_items">About us</a></li>
             <li><a href="#dogs" class="vo_nav_items">Meet the dogs</a></li>
-            <li><a href="#" class="vo_nav_items">Events</a></li>
-            <li><a href="#" class="vo_nav_items">Contact</a></li>
+            <li><a href="#events" class="vo_nav_items">Events</a></li>
+            <li><a href="#contact" class="vo_nav_items">Contact</a></li>
         </ul>
     </div>
 
-    <div class="vo_home" id="home">
+    <div class="vo_home">
         <img src="./resources/img/WhatsApp_Image_2020-11-16_at_19.42.10.jpeg">
         <h2>Helping dogs since 2020</h2>
     </div>
 
-    <div class="vo_about" id="about">
+    <hr id="about">
+
+    <div class="vo_about">
         <h2>About us</h2>
         <div class="vo_about_content">
             <div class="vo_about_text">
@@ -61,9 +63,9 @@
         </div>
     </div>
 
-    <hr>
+    <hr id="dogs">
 
-    <div class="vo_dogs" id="dogs">
+    <div class="vo_dogs">
         <h2>Meet the dogs</h2>
         <div class="vo_container">
             <div class="vo_card">
@@ -75,7 +77,7 @@
                         <h3>Aki</h3>
                     </div>
                     <div class="vo_card_btn">
-                        <button>Read more</button>
+                        <button>Read more about me!</button>
                     </div>
                 </div>
             </div>
@@ -88,7 +90,7 @@
                         <h3>Lara</h3>
                     </div>
                     <div class="vo_card_btn">
-                        <button>Read more</button>
+                        <button>Read more about me!</button>
                     </div>
                 </div>
             </div>
@@ -101,12 +103,60 @@
                         <h3>Doggo</h3>
                     </div>
                     <div class="vo_card_btn">
-                        <button>Read more</button>
+                        <button>Read more about me!</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <hr id="events">
+
+    <div class="vo_events">
+        <h2>Events</h2>
+        <p>
+            We have a great number of events planned, but given the current situation of the pandemic we couldn't put
+            them in motion
+            The only event we had held is the opening of the centre in February 2020, where we had introduced our dogs
+            to the people interested in them. We even had a few happy moments when our canine friends found new
+            families. You can see more about the Opening Day in the video presented below
+        </p>
+        <div class="vo_events_video">
+            <video class="vo_video" controls>
+                <source src="./resources/video/events.mp4" type="video/mp4">
+                Our video is not available at the moment, sadly.
+            </video>
+        </div>
+    </div>
+
+    <hr id="contact">
+
+    <div class="vo_contact">
+        <h2>Contact</h2>
+        <div class="vo_contact_content">
+            <form>
+                <h4>Contact us for more details!</h4>
+                <div class="form_content">
+                    <label for="name">Name:</label>
+                    <br>
+                    <input type="text" name="name" placeholder="Full name" class="space">
+                    <br>
+                    <label for="email">E-mail:</label>
+                    <br>
+                    <input type="email" name="email" placeholder="E-mail" class="space">
+                    <br>
+                    <label for="msg" class="space">Message:</label>
+                    <br>
+                    <textarea name="msg"></textarea>
+                    <br>
+                    <input type="submit" style="margin-top: 2em; margin-bottom: 2em;" value="Send">
+                </div>
+            </form>
+            <img src="./resources/img/harta.png">
+        </div>
+    </div>
+
+    <hr>
 
     <script src="./script.js"></script>
 </body>
