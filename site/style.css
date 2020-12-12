@@ -23,6 +23,34 @@ p {
     text-indent: 2em;
 }
 
+#tail{
+    animation: tail 0.5s infinite linear;
+}
+
+#left_ear, #right_ear{
+    animation: ears 1s infinite linear;
+}
+
+@keyframes tail{
+    from{
+        transform: translate(-5vh, 0vh);
+    }
+
+    to{
+        transform: translate(5vh, 0vh);
+    }
+}
+
+@keyframes ears{
+    from{
+        transform: translate(0vh, 0vh);
+    }
+
+    to{
+        transform: translate(0vh, -1vh);
+    }
+}
+
 .space {
     margin-bottom: 2em;
 }
@@ -77,14 +105,13 @@ li a {
     font-family: Permanent Marker;
     color: white;
     font-size: 3em;
-    padding-top: 2em;
 }
 
-.vo_home img {
+.vo_home svg {
     display: block;
     margin-left: auto;
     margin-right: auto; 
-    width: 60px;
+    width: 18em;
 }
 
 .vo_about {
@@ -207,7 +234,7 @@ li a {
 .vo_events_video {
     display: flex;
     justify-content: center;
-    margin-bottom: 2em;
+    margin-bottom: 3em;
 }
 
 .vo_video {
@@ -215,6 +242,29 @@ li a {
     min-width: 10rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px #000000;
+    z-index: -1;
+}
+
+.vo_btn_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: space-between;
+}
+
+.vo_btn_container button {
+    font-family: 'Castoro', serif;
+    font-size: 1em;
+    width: 9.5em;
+    height: 2.5em;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: lightpink;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 2em;
 }
 
 .vo_contact{
