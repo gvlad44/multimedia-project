@@ -64,6 +64,7 @@ p {
     position: sticky;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 ul {
@@ -92,7 +93,9 @@ li a {
 }
 
 .vo_home {
-    background-image: url('./resources/img/bg.svg');
+    background: #62ac96;
+    background-image: url("./resources/img/ZenBG-1.png"), url("./resources/img/ZenBG-2.png");
+    background-repeat: repeat-x, repeat;
     background-size: cover;
     background-position: center;
     height: 80vh;
@@ -239,10 +242,11 @@ li a {
 
 .vo_video {
     width: 50rem;
+    height: 30rem;
+    min-height: 6rem;
     min-width: 10rem;
     border-radius: 10px;
     box-shadow: 0 10px 20px #000000;
-    z-index: -1;
 }
 
 .vo_btn_container {
