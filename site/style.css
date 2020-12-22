@@ -1,343 +1,478 @@
-@font-face{
-    font-family: Permanent Marker;
-    src: url('./resources/PermanentMarker-Regular.ttf');
+html {
+  box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
-a{
-    color: black;
-    font-style: none;
+@font-face {
+  font-family: Permanent Marker;
+  src: url("./resources/PermanentMarker-Regular.ttf");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: black;
+  font-style: none;
 }
 
 hr {
-    margin-top: 0;
-    margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 p {
-    font-family: 'Castoro', serif;
-    text-indent: 2em;
+  font-family: "Castoro", serif;
+  text-indent: 2em;
 }
 
-#tail{
-    animation: tail 0.5s infinite linear;
+#tail {
+  animation: tail 0.5s infinite linear;
 }
 
-#left_ear, #right_ear{
-    animation: ears 1s infinite linear;
+#left_ear,
+#right_ear {
+  animation: ears 1s infinite linear;
 }
 
-@keyframes tail{
-    from{
-        transform: translate(-5vh, 0vh);
-    }
+@keyframes tail {
+  from {
+    transform: translate(-5vh, 0vh);
+  }
 
-    to{
-        transform: translate(5vh, 0vh);
-    }
+  to {
+    transform: translate(5vh, 0vh);
+  }
 }
 
-@keyframes ears{
-    from{
-        transform: translate(0vh, 0vh);
-    }
+@keyframes ears {
+  from {
+    transform: translate(0vh, 0vh);
+  }
 
-    to{
-        transform: translate(0vh, -1vh);
-    }
+  to {
+    transform: translate(0vh, -1vh);
+  }
 }
 
 .space {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .vo_nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
-    font-family: Permanent Marker;
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  font-family: Permanent Marker;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 ul {
-    list-style-type: none;
-    margin-right: 2em;
-}
-  
-li {
-    float: left;
-}
-  
-li a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 1em;
-    list-style: none;
-    color: white;
-    padding: 20px 15px;
+  list-style-type: none;
+  margin-right: 2em;
 }
 
-.vo_logo a img{
-    align-items: center;
-    padding: 10px 10px;
-    width: 30px;
-    margin-left: 2em;
+li {
+  float: left;
+}
+
+li a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1em;
+  list-style: none;
+  color: white;
+  padding: 20px 15px;
+}
+
+.vo_logo a svg {
+  align-items: center;
+  padding: 10px 10px;
+  width: 100px;
+  height: 80px;
+  margin-left: 2em;
 }
 
 .vo_home {
-    background: #62ac96;
-    background-image: url("./resources/img/ZenBG-1.png"), url("./resources/img/ZenBG-2.png");
-    background-repeat: repeat-x, repeat;
-    background-size: cover;
-    background-position: center;
-    height: 80vh;
-    padding-top: 5em;
-    background-repeat: no-repeat;
+  background: #62ac96;
+  background-image: url("./resources/img/ZenBG-1.png"),
+    url("./resources/img/ZenBG-2.png");
+  background-repeat: repeat-x, repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  padding-top: 5em;
+  background-repeat: no-repeat;
 }
 
-.vo_home h2{
-    text-align: center;
-    font-family: Permanent Marker;
-    color: white;
-    font-size: 3em;
+.vo_home h2 {
+  text-align: center;
+  font-family: Permanent Marker;
+  color: white;
+  font-size: 3em;
+  animation: text-shadow 1.5s ease-in-out 2;
+}
+
+@keyframes text-shadow {
+  0% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #5160b4, 0 0 0 #62f5f5, 0 0 0 #e66574, 0 0 0 #ebe975;
+  }
+
+  20% {
+    transform: translateY(-1em);
+    text-shadow: 0 0.125em 0 #5160b4, 0 0.25em 0 #62f5f5, 0 -0.125em 0 #e66574,
+      0 -0.25em 0 #ebe975;
+  }
+
+  40% {
+    transform: translateY(0.5em);
+    text-shadow: 0 -0.0625em 0 #5160b4, 0 -0.125em 0 #62f5f5,
+      0 0.0625em 0#e66574, 0 0.125em 0 #ebe975;
+  }
+
+  60% {
+    transform: translateY(-0.25em);
+    text-shadow: 0 0.03125em 0 #5160b4, 0 0.0625em 0#62f5f5,
+      0 -0.03125em 0#e66574, 0 -0.0625em 0#ebe975;
+  }
+
+  80% {
+    transform: translateY(0);
+    text-shadow: 0 0 0 #5160b4, 0 0 0 #62f5f5, 0 0 0#e66574, 0 0 0 #ebe975;
+  }
 }
 
 .vo_home svg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    width: 18em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 18em;
 }
 
 .vo_about {
-    margin-left: 3em;
-    margin-top: 2em;
-    margin-right: 3em;
+  margin-left: 3em;
+  margin-top: 2em;
+  margin-right: 3em;
 }
 
 .vo_about h2 {
-    font-family: Permanent Marker;
-    font-size: 3em;
-    text-indent: 1em;
+  font-family: Permanent Marker;
+  font-size: 3em;
+  text-indent: 1em;
 }
 
 .vo_about_content {
-    display: flex;
-    align-content: center;
+  display: flex;
+  align-content: center;
 }
 
-#about_img{
-    width: 40%;
-    margin-bottom: 2em;
+canvas {
+  margin-bottom: 6em;
 }
 
 .vo_about_text {
-    margin-right: 3em;
+  margin-right: 3em;
 }
 
 .vo_dogs {
-    margin-left: 3em;
-    margin-top: 2em;
-    margin-right: 3em;
+  margin-left: 3em;
+  margin-top: 2em;
+  margin-right: 3em;
 }
 
 .vo_dogs h2 {
-    font-family: Permanent Marker;
-    font-size: 3em;
-    text-indent: 1em;
+  font-family: Permanent Marker;
+  font-size: 3em;
+  text-indent: 1em;
 }
 
 .vo_container {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin: 2em;
-    margin-left: 0;
-    margin-right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 2em;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .vo_card {
-    min-height: 40vh;
-    width: 25em;
-    border: solid 1px black;
-    border-radius: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+  min-height: 40vh;
+  width: 25em;
+  border: solid 1px black;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .vo_card_img {
-    min-height: 15vh;
-    display: flex;
-    justify-content: center;
-    padding-top: 1em;
-    padding-bottom: 1em;
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 .vo_card_img img {
-    width: 20em;
-    border-radius: 10px;
+  width: 22em;
+  height: 15em;
+  border-radius: 10px;
 }
 
 .vo_card_text {
-    text-align: center;
-    font-family: Permanent Marker;
-    font-size: 1.5em;
-    padding-bottom: 0.5em;
+  text-align: center;
+  font-family: Permanent Marker;
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
 }
 
 .vo_card_text h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 0.5em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.5em;
 }
 
 .vo_card_btn {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 1em;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1em;
 }
 
 .vo_card_btn button {
-    font-family: Permanent Marker;
-    font-size: 1.2em;
-    width: 16.5em;
-    height: 2.5em;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    border-radius: 10px;
-    background-color: lightpink;
+  font-family: Permanent Marker;
+  font-size: 1.2em;
+  width: 16.5em;
+  height: 2.5em;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: lightpink;
 }
 
 .vo_card_content {
-    background-color: lightblue;
-    border-radius: 0px 0px 10px 10px ;
+  background-color: lightblue;
+  border-radius: 0px 0px 10px 10px;
 }
 
-.vo_events{
-    margin-left: 3em;
-    margin-top: 2em;
-    margin-right: 3em;
+.vo_mdl {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-.vo_events h2{
-    font-family: Permanent Marker;
-    font-size: 3em;
-    text-indent: 1em;
+.vo_mdl_content {
+  margin: auto;
+  overflow: auto;
+  width: 60em;
+  height: 30em;
+  background-color: #fff;
+  border-radius: 10px;
+  font-family: "Castoro", serif;
+  font-size: 1em;
+}
+
+.vo_mdl_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.vo_mdl_container header {
+  display: flex;
+  flex-direction: row;
+  height: 2.5em;
+  margin-bottom: 5em;
+}
+
+.vo_mdl_img_container {
+  min-height: 15vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.vo_mdl_img_container img {
+  width: 25em;
+  height: 15em;
+  border-radius: 10px;
+}
+
+#mdl_img1 {
+  filter: contrast(150%) hue-rotate(180deg) hue-rotate(180deg) sepia(75%)
+    saturate(300%);
+}
+
+#mdl_img2 {
+  filter: brightness(100%) contrast(150%) hue-rotate(-15deg) sepia(50%)
+    saturate(200%);
+}
+
+#mdl_img3 {
+  filter: hue-rotate(-30deg) sepia(75%) contrast(150%) saturate(300%)
+    hue-rotate(30deg);
+}
+
+.vo_mdl_text {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: "Castoro", serif;
+  text-indent: 0;
+}
+
+.vo_mdl_audio_container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.vo_close_btn {
+  margin-left: auto;
+  margin-right: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: lightblue;
+  transition-duration: 0.5s;
+}
+
+.vo_close_btn:hover {
+  background-color: #5160b4 !important;
+}
+
+.vo_events {
+  margin-left: 3em;
+  margin-top: 2em;
+  margin-right: 3em;
+}
+
+.vo_events h2 {
+  font-family: Permanent Marker;
+  font-size: 3em;
+  text-indent: 1em;
 }
 
 .vo_events_video {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 3em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3em;
 }
 
 .vo_video {
-    width: 50rem;
-    height: 30rem;
-    min-height: 6rem;
-    min-width: 10rem;
-    border-radius: 10px;
-    box-shadow: 0 10px 20px #000000;
+  width: 50rem;
+  height: 30rem;
+  min-height: 6rem;
+  min-width: 10rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px #000000;
 }
 
 .vo_btn_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-self: space-between;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-self: space-between;
 }
 
 .vo_btn_container button {
-    font-family: 'Castoro', serif;
-    font-size: 1em;
-    width: 9.5em;
-    height: 2.5em;
-    cursor: pointer;
-    border: none;
-    font-weight: bold;
-    border-radius: 10px;
-    background-color: lightpink;
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-    margin-bottom: 2em;
+  font-family: "Castoro", serif;
+  font-size: 1em;
+  width: 9.5em;
+  height: 2.5em;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: lightpink;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  margin-bottom: 2em;
 }
 
-.vo_contact{
-    margin-left: 3em;
-    margin-top: 2em;
-    margin-right: 3em;
-    margin-bottom: 2em;
-    
+.vo_contact {
+  margin-left: 3em;
+  margin-top: 2em;
+  margin-right: 3em;
+  margin-bottom: 2em;
 }
 
-.vo_contact h2{
-    font-family: Permanent Marker;
-    font-size: 3em;
-    text-indent: 1em;
+.vo_contact h2 {
+  font-family: Permanent Marker;
+  font-size: 3em;
+  text-indent: 1em;
 }
 
 .vo_contact_content {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    border: solid 1px black;
-    border-radius: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: solid 1px black;
+  border-radius: 10px;
 }
 
 .vo_contact_content form {
-    margin-left: 3em;
+  margin-left: 3em;
 }
 
 .vo_contact_content h4 {
-    font-family: 'Castoro', serif;
-    font-size: 1.5em;
+  font-family: "Castoro", serif;
+  font-size: 1.5em;
 }
 
-.vo_contact_content img{
-    width: 22.5rem;
+.vo_contact_content img {
+  width: 22.5rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-right: 3em;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+
+  .vo_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .vo_card {
+    min-height: 30vh;
+    width: 15em;
+    border: solid 1px black;
+    border-radius: 10px;
     margin-top: 1em;
     margin-bottom: 1em;
-    margin-right: 3em;
-}
+  }
 
+  .vo_card_img img {
+    width: 10em;
+    border-radius: 10px;
+  }
 
-@media only screen and (max-width: 768px){
-    body {
-        margin: 0;
-    }
+  #CanvasEx {
+    display: none;
+  }
 
-    .vo_container{
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-    }
-
-    .vo_card {
-        min-height: 30vh;
-        width: 15em;
-        border: solid 1px black;
-        border-radius: 10px;
-        margin-top: 1em;
-        margin-bottom: 1em;
-    }
-
-    .vo_card_img img {
-        width: 10em;
-        border-radius: 10px;
-    }
-
-    #about_img {
-        display: none;
-    }
-
+  #contact_img {
+    display: none;
+  }
 }
