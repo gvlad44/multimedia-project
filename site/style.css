@@ -335,6 +335,8 @@ canvas {
   font-weight: bold;
   font-family: "Castoro", serif;
   text-indent: 0;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .vo_mdl_audio_container {
