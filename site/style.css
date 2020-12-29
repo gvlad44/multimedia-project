@@ -33,6 +33,23 @@ p {
   text-indent: 2em;
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: lightblue;
+  border-radius: 7.5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #62ac96;
+}
+
 #tail {
   animation: tail 0.5s infinite linear;
 }
@@ -94,6 +111,10 @@ li a {
   list-style: none;
   color: white;
   padding: 20px 15px;
+}
+
+.vo_nav_items:hover {
+  color: lightblue;
 }
 
 .vo_logo a svg {
@@ -165,6 +186,7 @@ li a {
   margin-left: 3em;
   margin-top: 2em;
   margin-right: 3em;
+  margin-bottom: 5em;
 }
 
 .vo_about h2 {
@@ -190,6 +212,7 @@ canvas {
   margin-left: 3em;
   margin-top: 2em;
   margin-right: 3em;
+  margin-bottom: 5em;
 }
 
 .vo_dogs h2 {
@@ -362,6 +385,7 @@ canvas {
   margin-left: 3em;
   margin-top: 2em;
   margin-right: 3em;
+  margin-bottom: 5em;
 }
 
 .vo_events h2 {
@@ -411,7 +435,7 @@ canvas {
   margin-left: 3em;
   margin-top: 2em;
   margin-right: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 5em;
 }
 
 .vo_contact h2 {
@@ -442,6 +466,73 @@ canvas {
   margin-top: 1em;
   margin-bottom: 1em;
   margin-right: 3em;
+  height: 30em;
+}
+
+.form_content input[type="text"] {
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 1em;
+  width: 15em;
+}
+
+.form_content input[type="email"] {
+  border: 1px black solid;
+  border-radius: 10px;
+  padding: 1em;
+  width: 15em;
+}
+
+.form_content input[type="submit"] {
+  border: 1px black solid;
+  border-radius: 10px;
+  font-family: "Castoro", serif;
+  font-size: 1em;
+  width: 9.5em;
+  height: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: lightpink;
+}
+
+textarea {
+  border: 1px black solid;
+  border-radius: 10px;
+  font-family: "Castoro", serif;
+  font-size: 1em;
+  width: 13em;
+  height: 13em;
+}
+
+.vo_footer {
+  background-image: url("./resources/img/ZenBG-1.png"),
+    url("./resources/img/ZenBG-2.png");
+  background-repeat: repeat-x, repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 25vh;
+  color: white;
+}
+
+.vo_footer_content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+}
+
+.vo_footer h3 {
+  font-family: Permanent Marker;
+  font-size: 2.25em;
+  text-indent: 1em;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.vo_footer_iconstxt {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3em;
+  font-size: 1.2em;
 }
 
 @media only screen and (max-width: 768px) {
