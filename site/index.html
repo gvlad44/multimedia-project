@@ -21,11 +21,11 @@
 </svg> </a>
         </div>
         <ul>
-            <li><a href="#home" class="vo_nav_items">Home</a></li>
-            <li><a href="#about" class="vo_nav_items">About us</a></li>
-            <li><a href="#dogs" class="vo_nav_items">Meet the dogs</a></li>
-            <li><a href="#events" class="vo_nav_items">Events</a></li>
-            <li><a href="#contact" class="vo_nav_items">Contact</a></li>
+            <li><a href="#home" class="vo_nav_items" id="vo_first_item">Home</a></li>
+            <li><a href="#about" class="vo_nav_items" id="vo_second_item">About us</a></li>
+            <li><a href="#dogs" class="vo_nav_items" id="vo_third_item">Meet the dogs</a></li>
+            <li><a href="#events" class="vo_nav_items" id="vo_fourth_item">Events</a></li>
+            <li><a href="#contact" class="vo_nav_items" id="vo_five_item">Contact</a></li>
         </ul>
     </div>
 
@@ -136,7 +136,7 @@
     <hr id="about">
 
     <div class="vo_about">
-        <h2>About us</h2>
+        <h2 style="margin-top: 2em;">About us</h2>
         <div class="vo_about_content">
             <div class="vo_about_text">
                 <p>
@@ -151,25 +151,31 @@
                     (Medical quarters)
                 </p>
                 <p>
-                    We are a non-profit organization established in 2020 which cares deeply for the well-being of
-                    animals.
-                    Our
-                    main concern is to find a loving home to the stray dogs we rescued
-                    that are eager to bring happiness into your lives. Your new friends live in a compound composed of
-                    two
-                    buildings, one in which they live (Dogs quarters) and one where they pay a visit when they feel
-                    unwell
-                    (Medical quarters)
+                    Below is some dummy text.
+                </p>
+                <p>
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                     ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                      fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                       justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis,
+                     ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo,
+                      fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                       justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. 
                 </p>
             </div>
-            <canvas id="CanvasEx" width="600" height="300"></canvas>
+            <canvas id="CanvasEx" width="800" height="600"></canvas>
         </div>
     </div>
 
     <hr id="dogs">
 
     <div class="vo_dogs">
-        <h2>Meet the dogs</h2>
+        <h2 style="margin-top: 2em;">Meet the dogs</h2>
         <div class="vo_container">
             <div class="vo_card">
                 <div class="vo_card_img">
@@ -293,12 +299,29 @@
                 </div>
             </div>
         </div>
+
+        <h4>After getting to know the dogs arrange them in your preffered order</h4>
+
+        <div class="vo_names_ctr">
+            <div class="vo_dog_name" >
+                <p class="vo_drag" draggable="true" order="1" quizz="1">Aki</p>
+            </div>
+            <div class="vo_dog_name" >
+                <p class="vo_drag" draggable="true" order="2" quizz="1">Doggo</p>
+            </div>
+            <div class="vo_dog_name" >
+                <p class="vo_drag" draggable="true" order="3" quizz="1">Lara</p>
+            </div>
+        </div>
+        <div class="vo_drop_area"></div>
+
+
     </div>
 
     <hr id="events">
 
     <div class="vo_events">
-        <h2>Events</h2>
+        <h2 style="margin-top: 2em;">Events</h2>
         <p>
             We have a great number of events planned, but given the current situation of the pandemic we couldn't put
             them in motion
@@ -324,7 +347,7 @@
     <hr id="contact">
 
     <div class="vo_contact">
-        <h2>Contact</h2>
+        <h2 style="margin-top: 2em;">Contact</h2>
         <div class="vo_contact_content">
             <form>
                 <h4>Contact us for more details!</h4>
@@ -353,7 +376,7 @@
             <h3>Find us at</h3>
             <div class="vo_footer_iconstxt">
                 <i class="fas fa-map-marker-alt" style="margin-bottom: 4px; margin-top: 4px;"> Piața Romană 6, București 010374</i>
-                <i class="fas fa-mobile"style="margin-bottom: 4px; margin-top: 4px;"> 0743146041</i>
+                <i class="fas fa-mobile"style="margin-bottom: 4px; margin-top: 4px;">&nbsp 0743146041</i>
                 <i class="fab fa-facebook" style="margin-top: 4px; font-weight: bold;"> Not yet available</i>
 
             </div>
