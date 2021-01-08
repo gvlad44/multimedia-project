@@ -1,0 +1,32 @@
+{
+    "name": "Dog Adoption Center",
+    "start_url": "/site/adopt_dog.html",
+    "short_name": "Dog",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "lang": "en-US",
+    "icons": [
+        {
+            "src": "/site/resources/img/dog16.png",
+            "sizes": "16x16",
+            "type": "image/png"
+        },
+        {
+            "src": "/site/resources/img/dog512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "/site/resources/img/dog32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "/site/resources/img/dog192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "theme_color": "#FFFFFF"
+}

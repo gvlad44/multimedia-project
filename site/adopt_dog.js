@@ -1,3 +1,18 @@
+window.onload = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((regstr) => {
+        console.log(regstr);
+        console.log("merge");
+        return regstr;
+      })
+      .catch((err) => {
+        console.error("nu merge ", err);
+      });
+  }
+};
+
 let video = document.querySelector("video");
 
 function blackandwhite() {
@@ -84,15 +99,14 @@ window.onclick = function (event) {
   }
 };
 
+let dog_names = document.getElementsByClassName("vo_drag");
+let drop_area = document.getElementsByClassName("vo_drop_area");
 addEventListener("load", () => {
-  let dog_names = document.getElementsByClassName("vo_drag");
-
   for (let i = 0; i < dog_names.length; i++) {
     dog_names[i].setAttribute("ondragstart", "dragName(event)");
   }
 
-  let drop_area = document.getElementsByClassName("vo_drop_area");
-  for (let j = 0; j < dog_names.length; j++) {
+  for (let j = 0; j < drop_area.length; j++) {
     drop_area[j].setAttribute("ondragover", "allowDragDrop(event)");
     drop_area[j].setAttribute("ondrop", "dropName(event)");
   }
@@ -161,3 +175,25 @@ site.addEventListener("keydown", (evt) => {
     window.location.hash = "#contact";
   }
 });
+
+var voColor = document.getElementById("vo_color");
+var findColor = document.getElementById("findColor");
+
+let bg = document.getElementsByTagName("BODY")[0];
+var duration = 1000;
+var timer;
+findColor.ontouchstart = startAction;
+
+function startAction() {
+  timer = setTimeout(secret, duration);
+}
+findColor.ontouchend = endAction;
+
+function endAction() {
+  if (timer) clearTimeout(timer);
+}
+function secret() {
+  voColor.textContent = "The color of meat obviously";
+  bg.style.backgroundColor = "#a0522d";
+  console.log("hello");
+}

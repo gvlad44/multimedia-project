@@ -8,11 +8,6 @@ html {
   box-sizing: inherit;
 }
 
-@font-face {
-  font-family: Permanent Marker;
-  src: url("./resources/PermanentMarker-Regular.ttf");
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -88,7 +83,7 @@ p {
   justify-content: space-between;
   align-items: center;
   background-color: black;
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   position: sticky;
   top: 0;
   left: 0;
@@ -140,7 +135,7 @@ li a {
 
 .vo_home h2 {
   text-align: center;
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   color: white;
   font-size: 3em;
   animation: text-shadow 1.5s ease-in-out 2;
@@ -192,7 +187,7 @@ li a {
 }
 
 .vo_about h2 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 3em;
   text-indent: 1em;
 }
@@ -219,13 +214,13 @@ canvas {
 }
 
 .vo_dogs h2 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 3em;
   text-indent: 1em;
 }
 
 .vo_dogs h4 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 2em;
   text-indent: 2em;
 }
@@ -265,7 +260,7 @@ canvas {
 
 .vo_card_text {
   text-align: center;
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 1.5em;
   padding-bottom: 0.5em;
 }
@@ -449,7 +444,7 @@ canvas {
 }
 
 .vo_events h2 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 3em;
   text-indent: 1em;
 }
@@ -500,7 +495,7 @@ canvas {
 }
 
 .vo_contact h2 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 3em;
   text-indent: 1em;
 }
@@ -528,6 +523,13 @@ canvas {
   margin-bottom: 1em;
   margin-right: 3em;
   height: 30em;
+}
+
+#contact_img {
+  width: 65%;
+  height: 35em;
+  margin-top: 2em;
+  margin-right: 2em;
 }
 
 .form_content input[type="text"] {
@@ -582,7 +584,7 @@ textarea {
 }
 
 .vo_footer h3 {
-  font-family: Permanent Marker;
+  font-family: "Permanent Marker", cursive;
   font-size: 2.25em;
   text-indent: 1em;
   margin-top: 0.3em;
@@ -596,16 +598,75 @@ textarea {
   font-size: 1.2em;
 }
 
+.vo_about h2 {
+  margin-top: 2em;
+}
+
+.vo_dogs h2 {
+  margin-top: 2em;
+}
+
+.vo_events h2 {
+  margin-top: 2em;
+}
+
+.vo_contact h2 {
+  margin-top: 2em;
+}
+
+.vo_mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 768px) {
   body {
     margin: 0;
   }
 
+  .vo_nav {
+    height: 15vh;
+  }
+
+  .vo_nav ul {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75em;
+  }
+
+  .vo_about h2 {
+    margin-top: 3em;
+  }
+
+  .vo_dogs {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .vo_dogs h2 {
+    margin-top: 3em;
+  }
+
+  .vo_events h2 {
+    margin-top: 3em;
+  }
+
+  .vo_contact h2 {
+    margin-top: 3em;
+  }
+
+  .vo_nav li a {
+    padding: 0;
+  }
+
   .vo_container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .vo_btn_container button {
+    height: auto;
   }
 
   .vo_card {
@@ -622,11 +683,82 @@ textarea {
     border-radius: 10px;
   }
 
+  .vo_about_content {
+    flex-direction: column;
+  }
+
   #CanvasEx {
-    display: none;
+    width: 100%;
+    height: 20em;
   }
 
   #contact_img {
     display: none;
+  }
+
+  .vo_names_ctr {
+    display: none;
+  }
+
+  .vo_drop_area {
+    display: none;
+  }
+
+  #hide {
+    display: none;
+  }
+
+  .vo_footer {
+    justify-content: center;
+    text-align: center;
+    text-indent: 0;
+  }
+
+  .vo_footer_content {
+    justify-content: center;
+    text-align: left;
+
+    margin-left: 0;
+  }
+
+  .vo_footer_iconstxt {
+    margin-left: 1em;
+    text-indent: 1em;
+  }
+
+  .vo_card_btn button {
+    width: auto;
+  }
+
+  .vo_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3em;
+  }
+
+  #vo_color {
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    font-family: "Castoro", serif;
+    text-indent: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 1em;
+  }
+
+  #findColor {
+    font-family: "Permanent Marker", cursive;
+    font-size: 1.2em;
+    width: auto;
+    height: 2.5em;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #e99f71;
+    padding-left: 2em;
+    padding-right: 2em;
   }
 }
