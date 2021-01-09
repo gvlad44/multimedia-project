@@ -4,11 +4,11 @@ window.onload = () => {
       .register("./sw.js")
       .then((regstr) => {
         console.log(regstr);
-        console.log("merge");
+        console.log("dog sw is working");
         return regstr;
       })
       .catch((err) => {
-        console.error("nu merge ", err);
+        console.error("dog sw is not working ", err);
       });
   }
 };
@@ -55,7 +55,7 @@ function draw(duration) {
 
   cont.drawImage(img, 150, 150, 450, 300);
 
-  if (actual_duration < 2990) {
+  if (actual_duration < 3030) {
     window.requestAnimationFrame(draw);
   }
 }
@@ -192,8 +192,13 @@ findColor.ontouchend = endAction;
 function endAction() {
   if (timer) clearTimeout(timer);
 }
+
 function secret() {
   voColor.textContent = "The color of meat obviously";
   bg.style.backgroundColor = "#a0522d";
   console.log("hello");
 }
+
+window.addEventListener("load", () => {
+  loadCanvas();
+});
