@@ -633,6 +633,10 @@ textarea {
     font-size: 0.75em;
   }
 
+  .vo_home svg {
+    width: auto;
+  }
+
   .vo_about h2 {
     margin-top: 3em;
   }

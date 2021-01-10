@@ -1,18 +1,3 @@
-window.onload = () => {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("./sw.js")
-      .then((regstr) => {
-        console.log(regstr);
-        console.log("dog sw is working");
-        return regstr;
-      })
-      .catch((err) => {
-        console.error("dog sw is not working ", err);
-      });
-  }
-};
-
 let video = document.querySelector("video");
 
 function blackandwhite() {
@@ -167,11 +152,11 @@ site.addEventListener("keydown", (evt) => {
     window.location.hash = "#dogs";
   }
   if (key == "e") {
-    site.style.backgroundColor = "";
+    site.style.backgroundColor = "#fcf5f0";
     window.location.hash = "#events";
   }
   if (key == "c") {
-    site.style.backgroundColor = "";
+    site.style.backgroundColor = "#f4cfb8";
     window.location.hash = "#contact";
   }
 });
@@ -199,6 +184,18 @@ function secret() {
   console.log("hello");
 }
 
-window.addEventListener("load", () => {
+window.onload = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((regstr) => {
+        console.log(regstr);
+        console.log("dog sw is working");
+        return regstr;
+      })
+      .catch((err) => {
+        console.error("dog sw is not working ", err);
+      });
+  }
   loadCanvas();
-});
+};
