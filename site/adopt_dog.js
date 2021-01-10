@@ -45,6 +45,21 @@ function draw(duration) {
   }
 }
 
+window.onload = () => {
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((regstr) => {
+        console.log("dog sw is working");
+        return regstr;
+      })
+      .catch((err) => {
+        console.error("dog sw is not working ", err);
+      });
+  }
+  loadCanvas();
+};
+
 function displayMdl1() {
   document.getElementById("vo_mdl1").style.display = "flex";
 }
@@ -119,13 +134,14 @@ function dropName(evt) {
     drop_order = drop_order + order;
   }
 
-  let elem = document.querySelector(
+  let ctr_elem = document.querySelector(
     '.vo_drag[quizz="' + quizz + '"][order="' + order + '"]'
   );
-  elem.style.opacity = 0.5;
-  elem.style.pointerEvents = "none";
+  ctr_elem.style.pointerEvents = "none";
 
-  let node = document.createTextNode(elem.innerText + " ");
+  ctr_elem.style.backgroundColor = "#e99f71";
+
+  let node = document.createTextNode(ctr_elem.innerText + " ");
   evt.target.appendChild(node);
 
   if (drop_order.length == 3) {
@@ -181,21 +197,4 @@ function endAction() {
 function secret() {
   voColor.textContent = "The color of meat obviously";
   bg.style.backgroundColor = "#a0522d";
-  console.log("hello");
 }
-
-window.onload = () => {
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker
-      .register("./sw.js")
-      .then((regstr) => {
-        console.log(regstr);
-        console.log("dog sw is working");
-        return regstr;
-      })
-      .catch((err) => {
-        console.error("dog sw is not working ", err);
-      });
-  }
-  loadCanvas();
-};

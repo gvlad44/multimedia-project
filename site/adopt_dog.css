@@ -525,7 +525,7 @@ canvas {
   height: 30em;
 }
 
-#contact_img {
+#vo_contact_img {
   width: 65%;
   height: 35em;
   margin-top: 2em;
@@ -696,7 +696,7 @@ textarea {
     height: 20em;
   }
 
-  #contact_img {
+  #vo_contact_img {
     display: none;
   }
 
