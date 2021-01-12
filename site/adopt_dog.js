@@ -153,7 +153,6 @@ let site = document.getElementsByTagName("BODY")[0];
 
 site.addEventListener("keydown", (evt) => {
   key = evt.key;
-  code = evt.code;
 
   if (key == "h") {
     site.style.backgroundColor = "white";

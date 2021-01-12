@@ -125,7 +125,6 @@ li a {
   background: #62ac96;
   background-image: url("./resources/img/ZenBG-1.png"),
     url("./resources/img/ZenBG-2.png");
-  background-repeat: repeat-x, repeat;
   background-size: cover;
   background-position: center;
   min-height: 90vh;
@@ -148,13 +147,13 @@ li a {
   }
 
   20% {
-    transform: translateY(-1em);
+    transform: translateY(-0.5em);
     text-shadow: 0 0.125em 0 #5160b4, 0 0.25em 0 #62f5f5, 0 -0.125em 0 #e66574,
       0 -0.25em 0 #ebe975;
   }
 
   40% {
-    transform: translateY(0.5em);
+    transform: translateY(0.25em);
     text-shadow: 0 -0.0625em 0 #5160b4, 0 -0.125em 0 #62f5f5,
       0 0.0625em 0#e66574, 0 0.125em 0 #ebe975;
   }
@@ -214,6 +213,12 @@ canvas {
 }
 
 .vo_dogs h2 {
+  font-family: "Permanent Marker", cursive;
+  font-size: 3em;
+  text-indent: 1em;
+}
+
+.vo_mdl_name {
   font-family: "Permanent Marker", cursive;
   font-size: 3em;
   text-indent: 1em;
@@ -343,8 +348,7 @@ canvas {
 }
 
 #mdl_img1 {
-  filter: contrast(150%) hue-rotate(180deg) hue-rotate(180deg) sepia(75%)
-    saturate(300%);
+  filter: contrast(150%) sepia(75%) saturate(300%);
 }
 
 #mdl_img2 {
@@ -383,7 +387,7 @@ canvas {
 }
 
 .vo_close_btn:hover {
-  background-color: #5160b4 !important;
+  background-color: #5160b4;
 }
 
 .vo_names_ctr {
@@ -764,5 +768,10 @@ textarea {
     background-color: #e99f71;
     padding-left: 2em;
     padding-right: 2em;
+  }
+
+  #name1 {
+    font-size: 2em;
+    margin-top: -5em;
   }
 }
